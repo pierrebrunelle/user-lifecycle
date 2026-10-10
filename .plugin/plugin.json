@@ -1,0 +1,22 @@
+{
+  "name": "user-lifecycle",
+  "version": "0.3.0",
+  "description": "A product manager walks one person through a product, from arrival until they finish or give up, and notes where the job breaks.",
+  "author": {
+    "name": "Pierre Brunelle",
+    "url": "https://github.com/pierrebrunelle"
+  },
+  "homepage": "https://github.com/pierrebrunelle/user-lifecycle",
+  "repository": "https://github.com/pierrebrunelle/user-lifecycle",
+  "license": "MIT",
+  "keywords": [
+    "usability",
+    "product-management",
+    "cognitive-walkthrough",
+    "user-research",
+    "agent-skill"
+  ],
+  "skills": "skills",
+  "agents": "agents",
+  "commands": "commands"
+}

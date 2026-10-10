@@ -10,7 +10,7 @@ description: >
 license: MIT
 metadata:
   author: Pierre Brunelle
-  version: 0.2.0
+  version: 0.3.0
 ---
 
 # User lifecycle

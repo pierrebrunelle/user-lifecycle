@@ -1,14 +1,43 @@
-# user-lifecycle
+# User lifecycle
 
-An agent skill. A product manager sits with one person and walks the job they came to do, from arrival until they finish or give up. The notes say where the experience breaks.
+A product manager sits with one person and walks the job they came to do, from arrival until they finish or give up. The notes say where the experience breaks.
 
 The product in front of the agent supplies the screens, the words, and the path. The skill supplies the session.
+
+## Install
+
+### Skill (recommended for most assistants)
+
+Install the portable skill with [npx skills](https://github.com/vercel-labs/skills):
 
 ```bash
 npx skills add pierrebrunelle/user-lifecycle
 ```
 
-Works in Cursor, Claude Code, Codex, and the other agents the [skills CLI](https://github.com/vercel-labs/skills) supports. Add `-g` to install it for every project.
+This installs `SKILL.md` for supported coding assistants, including Cursor, Copilot, Windsurf, and the Codex IDE extension.
+
+**Google Antigravity** is not one of them: it reads `~/.gemini/antigravity/skills`, which `npx skills` does not write to. Install there with `./install.sh --platform antigravity`.
+
+### Full plugin
+
+Install the skill with its command and subagent using [npx plugins](https://www.npmjs.com/package/plugins):
+
+```bash
+npx plugins add pierrebrunelle/user-lifecycle
+```
+
+Client-native marketplace options:
+
+- **Claude Code:** `/plugin marketplace add pierrebrunelle/user-lifecycle`, then `/plugin install user-lifecycle@user-lifecycle`
+- **ChatGPT desktop and Codex:** `codex plugin marketplace add pierrebrunelle/user-lifecycle --ref main`, then `codex plugin add user-lifecycle@user-lifecycle`. Use `/plugins` in Codex or the **Plugins** page in ChatGPT desktop.
+
+Restart or start a new conversation after installing. Repository marketplaces are team-distribution sources. They do not publish to a public directory.
+
+### Any LLM
+
+Paste the skill into context:
+
+[SKILL.md](https://raw.githubusercontent.com/pierrebrunelle/user-lifecycle/main/skills/user-lifecycle/SKILL.md)
 
 ## Prompt
 
@@ -28,12 +57,29 @@ End with a table: moment, what they needed, what the product did, the change, an
 
 The skill in [`skills/user-lifecycle/SKILL.md`](skills/user-lifecycle/SKILL.md) is this prompt, for when the ask is only "walk this as a user, from A to Z."
 
+## What's inside
+
+```
+skills/user-lifecycle/
+├── SKILL.md                         # The session
+└── agents/openai.yaml               # Codex skill card
+
+agents/lifecycle-facilitator.md      # Subagent that runs the session
+commands/walk.md                     # /user-lifecycle:walk
+```
+
+Client manifests live next to the skill so each installer can discover the format it understands.
+
 ## What you get back
 
 1. The person, the job, and what done looks like.
 2. The facts the session depends on, each with where it was read.
 3. The session, step by step, in the product's words.
 4. A table of where the job broke, and a question about which rows to change.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Run `python3 scripts/validate_plugin.py` after a structural change.
 
 ## License
 

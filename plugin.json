@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "user-lifecycle",
+  "version": "0.3.0",
+  "description": "A product manager walks one person through a product, from arrival until they finish or give up, and notes where the job breaks.",
+  "author": {
+    "name": "Pierre Brunelle",
+    "url": "https://github.com/pierrebrunelle"
+  },
+  "homepage": "https://github.com/pierrebrunelle/user-lifecycle",
+  "repository": "https://github.com/pierrebrunelle/user-lifecycle",
+  "license": "MIT",
+  "keywords": [
+    "usability",
+    "product-management",
+    "cognitive-walkthrough",
+    "user-research",
+    "agent-skill"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "User lifecycle",
+        "shortDescription": "Walk one user through a product and note where the job breaks",
+        "longDescription": "Run a usability session on a product that was just built. One person, one job, from arrival until they finish or give up. The product supplies the screens and the words. The session notes where the job breaks.",
+        "developerName": "Pierre Brunelle",
+        "category": "Developer Tools",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://github.com/pierrebrunelle/user-lifecycle",
+        "privacyPolicyURL": "https://github.com/pierrebrunelle/user-lifecycle/blob/main/SECURITY.md",
+        "termsOfServiceURL": "https://github.com/pierrebrunelle/user-lifecycle/blob/main/LICENSE",
+        "brandColor": "#1C1917",
+        "defaultPrompt": [
+          "Walk one person through this product from arrival until they finish or give up",
+          "Run a usability session on the flow we just built",
+          "Confirm this experience and note where the job breaks"
+        ]
+      }
+    }
+  }
+}
