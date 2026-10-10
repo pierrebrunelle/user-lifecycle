@@ -14,9 +14,15 @@ Install the portable skill with [npx skills](https://github.com/vercel-labs/skil
 npx skills add pierrebrunelle/user-lifecycle
 ```
 
-This installs `SKILL.md` for supported coding assistants, including Cursor, Copilot, Windsurf, and the Codex IDE extension.
+This installs `SKILL.md` for supported coding assistants, including Cursor, Copilot, Windsurf, Codex, and Antigravity.
 
-**Google Antigravity** is not one of them: it reads `~/.gemini/antigravity/skills`, which `npx skills` does not write to. Install there with `./install.sh --platform antigravity`.
+Antigravity reads `~/.gemini/antigravity/skills`. Current `npx skills` writes that path when you name the agent:
+
+```bash
+npx skills add pierrebrunelle/user-lifecycle --agent antigravity
+```
+
+`./install.sh --platform antigravity` copies the same files without npx.
 
 ### Full plugin
 

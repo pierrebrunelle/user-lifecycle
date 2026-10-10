@@ -23,7 +23,7 @@
     "longDescription": "Run a usability session on a product that was just built. One person, one job, from arrival until they finish or give up. The product supplies the screens and the words. The session notes where the job breaks.",
     "developerName": "Pierre Brunelle",
     "category": "Developer Tools",
-    "capabilities": ["Read", "Write"],
+    "capabilities": ["Read"],
     "websiteURL": "https://github.com/pierrebrunelle/user-lifecycle",
     "privacyPolicyURL": "https://github.com/pierrebrunelle/user-lifecycle/blob/main/SECURITY.md",
     "termsOfServiceURL": "https://github.com/pierrebrunelle/user-lifecycle/blob/main/LICENSE",
