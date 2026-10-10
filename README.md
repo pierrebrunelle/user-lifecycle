@@ -1,6 +1,8 @@
 # user-lifecycle
 
-An agent skill. After you build something, the agent walks one user from the first screen to the day they leave, checks that story against the code, and lists the bugs and rough edges.
+An agent skill. A product manager sits with one person and walks the job they came to do, from arrival until they finish or give up. The notes say where the experience breaks.
+
+The product in front of the agent supplies the screens, the words, and the path. The skill supplies the session.
 
 ```bash
 npx skills add pierrebrunelle/user-lifecycle
@@ -10,27 +12,28 @@ Works in Cursor, Claude Code, Codex, and the other agents the [skills CLI](https
 
 ## Prompt
 
-Paste this when you want the walk in one message:
+Paste this when you want the session in one message:
 
 ```text
-Walk one user through what we just built, from the first screen to the day they leave. Confirm the experience. Report where it breaks.
+Run a usability session on what we just built. You are the product manager. One person, one job, from the moment they arrive until they are done or they give up.
 
-Before the story, list the facts it depends on and check each one in the code, the copy, and the commands. Check every price, limit, email, error, and any command we tell the user to run. Name the file, page, or command where you read it. If a fact is wrong, say so before the story. If that wrong fact is a command or a sentence the user will follow, and you already have the change open, fix it, then walk. Leave every other issue for the end.
+Say who they are, what done looks like, and what would make them leave. Walk in the order they would live it: arrival, entry, first success, the same job again, trouble, and leaving. Skip a stage this product does not have, and say which one.
 
-One person, with a name, a job, and dates. At each step say what they see, what they do, and what comes back on every channel that fires: the page, the email, the CLI or API, and the HTTP response their callers get. Quote those words from the source. If the string is not there, record the gap and keep that sentence out of the story.
+At each step, ask: will they know what to try, will they see the action, will they connect it with the result they want, and after they act will they know it worked? Write what they see, what they do, and what the product does in return. Quote the labels, buttons, empty states, errors, and messages from the source. If the words are missing, record the gap and keep a sentence of your own out of their mouth.
 
-Use the rates and limits in the repo and show the arithmetic. Take them through a real month: the warning before a limit, the limit itself, paying, a failed payment, and leaving, including what is still stopped the next morning. A stop we chose on purpose still counts when the page never says so.
+Check any fact the story depends on before you use it, and name where you read it. If a fact is wrong, say so before the story goes on. Change the product only if I asked you to fix what you find.
 
-End with a table: moment (the step), problem, fix, and size (Small, Small logic, Check first, or Release step). Say which rows you would do, and where they would land. Ask. Do not start them.
+End with a table: moment, what they needed, what the product did, the change, and the size (Small, Flow, or Check first). Ask which rows to change. Wait.
 ```
 
-The skill in [`skills/user-lifecycle/SKILL.md`](skills/user-lifecycle/SKILL.md) is this prompt, with the steps an agent needs when the ask is only "walk the new page as a user."
+The skill in [`skills/user-lifecycle/SKILL.md`](skills/user-lifecycle/SKILL.md) is this prompt, for when the ask is only "walk this as a user, from A to Z."
 
 ## What you get back
 
-1. The facts it checked, including any command or sentence it had to fix first.
-2. A dated lifecycle for one named user, with quotes and arithmetic from the source.
-3. A table of what still felt off, each row tied to a step, and a question about which rows to do.
+1. The person, the job, and what done looks like.
+2. The facts the session depends on, each with where it was read.
+3. The session, step by step, in the product's words.
+4. A table of where the job broke, and a question about which rows to change.
 
 ## License
 
