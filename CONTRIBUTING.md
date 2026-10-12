@@ -16,7 +16,9 @@ One skill, wrapped so each installer can find it.
 user-lifecycle/
 ├── skills/user-lifecycle/
 │   ├── SKILL.md                 # The session. Stay under 500 lines.
+│   ├── references/              # stages.md, floor.md, example.md
 │   └── agents/openai.yaml       # Codex skill card
+├── evals/evals.json             # Prompts and what a good session contains
 ├── commands/walk.md             # /user-lifecycle:walk
 ├── agents/lifecycle-facilitator.md
 ├── scripts/validate_plugin.py

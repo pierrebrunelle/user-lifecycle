@@ -2,7 +2,7 @@
 
 A product manager sits with one person and walks the job they came to do, from arrival until they finish or give up. The notes say where the experience breaks.
 
-The product in front of the agent supplies the screens, the words, and the path. The skill supplies the session.
+The product in front of the agent supplies the screens, the words, and the path. The skill supplies the session: the job before the story, the product used when it can run, and every quote checked against what was read.
 
 ## Install
 
@@ -52,35 +52,44 @@ Paste this when you want the session in one message:
 ```text
 Run a usability session on what we just built. You are the product manager. One person, one job, from the moment they arrive until they are done or they give up.
 
-Say who they are, what done looks like, and what would make them leave. Walk in the order they would live it: arrival, entry, first success, the same job again, trouble, and leaving. Skip a stage this product does not have, and say which one.
+Before the story, write a job card: who they are, the kind of arrival (finish a job, decide, understand, or make one call work), what done looks like, what would make them leave, and the path in the product's own screens or commands. If the product can run with no account and no key, use it and quote what it shows. If it cannot, quote the source and say so.
 
-At each step, ask: will they know what to try, will they see the action, will they connect it with the result they want, and after they act will they know it worked? Write what they see, what they do, and what the product does in return. Quote the labels, buttons, empty states, errors, and messages from the source. If the words are missing, record the gap and keep a sentence of your own out of their mouth.
+Walk in the order they would live it: arrival, entry, first success, the same job again, trouble, and leaving. Skip a stage this product does not have, and say which one. For trouble, produce two the product can actually produce, or name the ones you looked for and what you tried.
+
+At each step, ask: will they know what to try, will they see the action, will they connect it with the result they want, and after they act will they know it worked? Write what they see, what they do, and what the product does in return. Quote the labels, buttons, empty states, errors, and messages. If the words are missing, record the gap and keep a sentence of your own out of their mouth.
+
+Read the session back before the table. Every quote has to be where you said it was. Every change names that place and the words to add, move, or remove. Drop a change that would fit any product.
 
 Check any fact the story depends on before you use it, and name where you read it. If a fact is wrong, say so before the story goes on. Change the product only if I asked you to fix what you find.
 
 End with a table: moment, what they needed, what the product did, the change, and the size (Small, Flow, or Check first). Ask which rows to change. Wait.
 ```
 
-The skill in [`skills/user-lifecycle/SKILL.md`](skills/user-lifecycle/SKILL.md) is this prompt, for when the ask is only "walk this as a user, from A to Z."
+The procedure lives in [`skills/user-lifecycle/SKILL.md`](skills/user-lifecycle/SKILL.md). The paste above is the short form, for a single message when the skill is not installed.
 
 ## What's inside
 
 ```
 skills/user-lifecycle/
 ├── SKILL.md                         # The session
+├── references/                      # What to look for at each stage
+│   ├── stages.md
+│   ├── floor.md
+│   └── example.md
 └── agents/openai.yaml               # Codex skill card
 
 agents/lifecycle-facilitator.md      # Subagent that runs the session
 commands/walk.md                     # /user-lifecycle:walk
+evals/evals.json                     # Prompts and what a good session contains
 ```
 
 Client manifests live next to the skill so each installer can discover the format it understands.
 
 ## What you get back
 
-1. The person, the job, and what done looks like.
-2. The facts the session depends on, each with where it was read.
-3. The session, step by step, in the product's words.
+1. The job card: the person, the kind of arrival, what done looks like, what would make them leave, and the path.
+2. The facts the session depends on, each with where it was read, and whether the product was watched or read from source.
+3. The session, step by step, in the product's words, after every quote was checked.
 4. A table of where the job broke, and a question about which rows to change.
 
 ## Contributing

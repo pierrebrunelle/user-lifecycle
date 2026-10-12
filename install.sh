@@ -69,7 +69,7 @@ install_skill() {
     fi
   fi
 
-  mkdir -p "$skill_dest/agents"
+  mkdir -p "$skill_dest/agents" "$skill_dest/references"
 
   local script_dir
   script_dir="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" 2>/dev/null && pwd || echo ".")"
@@ -77,12 +77,17 @@ install_skill() {
   if [[ -f "$script_dir/skills/user-lifecycle/SKILL.md" ]]; then
     cp "$script_dir/skills/user-lifecycle/SKILL.md" "$skill_dest/"
     cp "$script_dir/skills/user-lifecycle/agents/openai.yaml" "$skill_dest/agents/"
+    cp "$script_dir/skills/user-lifecycle/references/"*.md "$skill_dest/references/"
   else
     curl -fsSL "$REPO_URL/skills/user-lifecycle/SKILL.md" -o "$skill_dest/SKILL.md"
     curl -fsSL "$REPO_URL/skills/user-lifecycle/agents/openai.yaml" -o "$skill_dest/agents/openai.yaml"
+    local ref
+    for ref in stages.md floor.md example.md; do
+      curl -fsSL "$REPO_URL/skills/user-lifecycle/references/$ref" -o "$skill_dest/references/$ref"
+    done
   fi
 
-  echo "  Installed: $skill_dest/SKILL.md + agents/openai.yaml"
+  echo "  Installed: $skill_dest (SKILL.md, agents/openai.yaml, references/)"
 }
 
 if [[ -n "$PLATFORM" ]]; then

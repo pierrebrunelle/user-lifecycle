@@ -1,0 +1,29 @@
+{
+  "skill_name": "user-lifecycle",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Walk this as a user, from A to Z. We just added a settings page.",
+      "expected_output": "A full session. The job card comes before the steps and names one person, the arrival kind, what done looks like, what would make them leave, the path taken from the product, and any stage the product does not have. Steps quote labels from the running screen or from source, and the writeup says which of those two it used. Two troubles are produced, or the writeup names the troubles it looked for and what it tried. The table uses Small, Flow, or Check first. Each change names the place and the words to add, move, or remove. A change that would fit any product is absent. The writeup asks which rows to change and leaves the product as it was.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Try the empty state. Would a new user know what to do?",
+      "expected_output": "The reach is the empty trouble, plus a short job card. The writeup does not walk arrival through leaving. It quotes the empty-state copy from the product. If the product has no empty-state copy, that gap is the finding. Table rows come from that stage.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Dogfood the CLI. I want to see the second time someone runs the same command.",
+      "expected_output": "Arrival kind is finish a job. The door is the help text and the command, quoted from a real run when the CLI can run with no account and no key. The reach is the same job again. The writeup says what the second run asks for again and what the first run left behind.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Who is this for? Don't walk it yet.",
+      "expected_output": "The job card only. No numbered session and no table. The person is taken from who the product addresses. If the product never says, the card says that and uses the narrowest person the first screen implies.",
+      "files": []
+    }
+  ]
+}

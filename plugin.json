@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "user-lifecycle",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A product manager walks one person through a product, from arrival until they finish or give up, and notes where the job breaks.",
   "author": {
     "name": "Pierre Brunelle",
