@@ -1,19 +1,19 @@
 {
-  "name": "user-lifecycle",
+  "name": "walk-the-job",
   "owner": {
     "name": "Pierre Brunelle",
     "url": "https://github.com/pierrebrunelle"
   },
   "metadata": {
-    "description": "A product manager walks one person through a product, from arrival until they finish or give up, and notes where the job breaks.",
-    "version": "0.6.0"
+    "description": "One person, one job. Walk the product, save the job card, and write the brief from what survived a check.",
+    "version": "0.7.0"
   },
   "plugins": [
     {
-      "name": "user-lifecycle",
-      "description": "A product manager walks one person through a product, from arrival until they finish or give up, and notes where the job breaks.",
+      "name": "walk-the-job",
+      "description": "One person, one job. Walk the product, save the job card, and write the brief from what survived a check.",
       "category": "productivity",
-      "homepage": "https://github.com/pierrebrunelle/user-lifecycle",
+      "homepage": "https://github.com/pierrebrunelle/walk-the-job",
       "source": "./",
       "strict": true
     }

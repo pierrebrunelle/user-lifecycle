@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# User lifecycle skill installer
-# Prefer: npx skills add pierrebrunelle/user-lifecycle
+# Walk the job skill installer
+# Prefer: npx skills add pierrebrunelle/walk-the-job
 # Usage:
 #   Interactive:  ./install.sh
 #   Direct:       ./install.sh --platform cursor-skill
 
-REPO_URL="https://raw.githubusercontent.com/pierrebrunelle/user-lifecycle/main"
+REPO_URL="https://raw.githubusercontent.com/pierrebrunelle/walk-the-job/main"
 
 TARGET_DIR=""
 PLATFORM=""
 
 usage() {
   cat <<EOF
-User lifecycle skill installer
+Walk the job skill installer
 
 Usage:
   ./install.sh                              Interactive mode
@@ -46,14 +46,14 @@ install_skill() {
   local skill_dest
 
   if [[ "$platform" == "cursor-skill" ]]; then
-    skill_dest="$HOME/.cursor/skills/user-lifecycle"
+    skill_dest="$HOME/.cursor/skills/walk-the-job"
   elif [[ "$platform" == "codex-skill" ]]; then
-    skill_dest="$HOME/.agents/skills/user-lifecycle"
+    skill_dest="$HOME/.agents/skills/walk-the-job"
   elif [[ "$platform" == "claude-code" ]]; then
-    skill_dest="$TARGET_DIR/.claude/skills/user-lifecycle"
+    skill_dest="$TARGET_DIR/.claude/skills/walk-the-job"
   elif [[ "$platform" == "antigravity" ]]; then
     # Antigravity reads ~/.gemini/antigravity/skills, which npx skills does not write.
-    skill_dest="$HOME/.gemini/antigravity/skills/user-lifecycle"
+    skill_dest="$HOME/.gemini/antigravity/skills/walk-the-job"
   else
     echo "Unknown platform: $platform"
     echo "Available: claude-code, cursor-skill, codex-skill, antigravity"
@@ -74,16 +74,16 @@ install_skill() {
   local script_dir
   script_dir="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" 2>/dev/null && pwd || echo ".")"
 
-  if [[ -f "$script_dir/skills/user-lifecycle/SKILL.md" ]]; then
-    cp "$script_dir/skills/user-lifecycle/SKILL.md" "$skill_dest/"
-    cp "$script_dir/skills/user-lifecycle/agents/openai.yaml" "$skill_dest/agents/"
-    cp "$script_dir/skills/user-lifecycle/references/"*.md "$skill_dest/references/"
+  if [[ -f "$script_dir/skills/walk-the-job/SKILL.md" ]]; then
+    cp "$script_dir/skills/walk-the-job/SKILL.md" "$skill_dest/"
+    cp "$script_dir/skills/walk-the-job/agents/openai.yaml" "$skill_dest/agents/"
+    cp "$script_dir/skills/walk-the-job/references/"*.md "$skill_dest/references/"
   else
-    curl -fsSL "$REPO_URL/skills/user-lifecycle/SKILL.md" -o "$skill_dest/SKILL.md"
-    curl -fsSL "$REPO_URL/skills/user-lifecycle/agents/openai.yaml" -o "$skill_dest/agents/openai.yaml"
+    curl -fsSL "$REPO_URL/skills/walk-the-job/SKILL.md" -o "$skill_dest/SKILL.md"
+    curl -fsSL "$REPO_URL/skills/walk-the-job/agents/openai.yaml" -o "$skill_dest/agents/openai.yaml"
     local ref
     for ref in stages.md floor.md example.md card.md walk.md cast.md trouble.md research.md critic.md brief.md questions.md; do
-      curl -fsSL "$REPO_URL/skills/user-lifecycle/references/$ref" -o "$skill_dest/references/$ref"
+      curl -fsSL "$REPO_URL/skills/walk-the-job/references/$ref" -o "$skill_dest/references/$ref"
     done
   fi
 
@@ -102,7 +102,7 @@ if [[ ! -t 0 ]]; then
 fi
 
 echo ""
-echo "User lifecycle skill installer"
+echo "Walk the job skill installer"
 echo "=============================="
 echo ""
 echo "  1) Claude Code"
@@ -121,5 +121,5 @@ case "$choice" in
 esac
 
 echo ""
-echo "Done. https://github.com/pierrebrunelle/user-lifecycle"
+echo "Done. https://github.com/pierrebrunelle/walk-the-job"
 echo ""

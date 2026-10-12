@@ -1,0 +1,4 @@
+interface:
+  display_name: "Walk the job"
+  short_description: "One person, one job, walked through the product"
+  default_prompt: "Use $walk-the-job to walk one person through this product, from arrival until they finish or give up."

@@ -1,11 +1,11 @@
 {
-  "name": "user-lifecycle",
+  "name": "walk-the-job",
   "interface": {
-    "displayName": "User lifecycle"
+    "displayName": "Walk the job"
   },
   "plugins": [
     {
-      "name": "user-lifecycle",
+      "name": "walk-the-job",
       "source": {
         "source": "local",
         "path": "./"

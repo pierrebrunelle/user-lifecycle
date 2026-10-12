@@ -1,19 +1,20 @@
 ---
-name: user-lifecycle
+name: walk-the-job
 description: >
-  Walk one person through a product the way a product manager runs a usability
-  session, then keep that job for the next question. Use when someone asks to
-  walk a flow, dogfood a feature, try an empty state or an error, say who a
-  feature is for, research a fact the job depends on, criticise a session, or
-  write the decision from what survived. Commands: walk, cast, trouble,
-  research, critic, brief. Quote the product. A missing cue is a finding.
+  Walk one person through one job in a product, quote what the product
+  shows, and note where the job breaks. Use when asked to walk a flow,
+  dogfood a feature, try an empty state or an error, say who it is for,
+  research a fact the job depends on, criticise the writeup, or write the
+  decision from what survived. Commands: walk, cast, trouble, research,
+  critic, brief. The product supplies the words. Do not use for a PRD, a
+  roadmap, lifecycle email, or account administration.
 license: MIT
 metadata:
   author: Pierre Brunelle
-  version: 0.6.0
+  version: 0.7.0
 ---
 
-# User lifecycle
+# Walk the job
 
 Sit with one person while they try to do a job. You are the product manager. The product in front of you is the one that was built. Every word they follow is a word the product shows. They cannot see a sentence you wrote for them.
 

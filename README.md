@@ -1,4 +1,4 @@
-# User lifecycle
+# Walk the job
 
 A product manager sits with one person and walks the job they came to do, from arrival until they finish or give up. The notes say where the experience breaks.
 
@@ -13,39 +13,39 @@ A good product solves the problem this person arrived with. A great one, once th
 Install the portable skill with [npx skills](https://github.com/vercel-labs/skills):
 
 ```bash
-npx skills add pierrebrunelle/user-lifecycle
+npx skills add pierrebrunelle/walk-the-job
 ```
 
-This installs `SKILL.md` for supported coding assistants, including Cursor, Copilot, Windsurf, Codex, and Antigravity.
+This installs `SKILL.md` and `references/` for supported coding assistants, including Cursor, Copilot, Windsurf, Codex, and Antigravity.
 
 Antigravity reads `~/.gemini/antigravity/skills`. Current `npx skills` writes that path when you name the agent:
 
 ```bash
-npx skills add pierrebrunelle/user-lifecycle --agent antigravity
+npx skills add pierrebrunelle/walk-the-job --agent antigravity
 ```
 
 `./install.sh --platform antigravity` copies the same files without npx.
 
 ### Full plugin
 
-Install the skill with its command and subagent using [npx plugins](https://www.npmjs.com/package/plugins):
+Install the skill with its six commands and three subagents using [npx plugins](https://www.npmjs.com/package/plugins):
 
 ```bash
-npx plugins add pierrebrunelle/user-lifecycle
+npx plugins add pierrebrunelle/walk-the-job
 ```
 
 Client-native marketplace options:
 
-- **Claude Code:** `/plugin marketplace add pierrebrunelle/user-lifecycle`, then `/plugin install user-lifecycle@user-lifecycle`
-- **ChatGPT desktop and Codex:** `codex plugin marketplace add pierrebrunelle/user-lifecycle --ref main`, then `codex plugin add user-lifecycle@user-lifecycle`. Use `/plugins` in Codex or the **Plugins** page in ChatGPT desktop.
+- **Claude Code:** `/plugin marketplace add pierrebrunelle/walk-the-job`, then `/plugin install walk-the-job@walk-the-job`
+- **ChatGPT desktop and Codex:** `codex plugin marketplace add pierrebrunelle/walk-the-job --ref main`, then `codex plugin add walk-the-job@walk-the-job`. Use `/plugins` in Codex or the **Plugins** page in ChatGPT desktop.
 
 Restart or start a new conversation after installing. Repository marketplaces are team-distribution sources. They do not publish to a public directory.
 
 ### Any LLM
 
-Paste the skill into context:
+Paste the skill folder into context. `SKILL.md` routes the command. The procedures live in `references/`.
 
-[SKILL.md](https://raw.githubusercontent.com/pierrebrunelle/user-lifecycle/main/skills/user-lifecycle/SKILL.md)
+[skills/walk-the-job](https://github.com/pierrebrunelle/walk-the-job/tree/main/skills/walk-the-job)
 
 ## Prompt
 
@@ -67,7 +67,7 @@ Check any fact the story depends on before you use it, and name where you read i
 End with a table: moment, what they needed, what the product did, the change, and the size (Small, Flow, or Check first). Ask which rows to change. Wait.
 ```
 
-The router lives in [`skills/user-lifecycle/SKILL.md`](skills/user-lifecycle/SKILL.md). The paste above is the short form of `walk`, for a single message when the skill is not installed.
+The paste above is the short form of `walk`, for a single message when the skill is not installed.
 
 ## Commands
 
@@ -85,7 +85,7 @@ The router lives in [`skills/user-lifecycle/SKILL.md`](skills/user-lifecycle/SKI
 ## What's inside
 
 ```
-skills/user-lifecycle/
+skills/walk-the-job/
 ├── SKILL.md                         # Which command, and the shared rules
 ├── references/                      # One file per command, plus the card
 └── agents/openai.yaml               # Codex skill card

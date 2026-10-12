@@ -13,8 +13,8 @@
 One skill, wrapped so each installer can find it.
 
 ```
-user-lifecycle/
-├── skills/user-lifecycle/
+walk-the-job/
+├── skills/walk-the-job/
 │   ├── SKILL.md                 # Routing. Stay under 500 lines.
 │   ├── references/              # card, questions, walk, cast, trouble, research, critic, brief, stages, floor, example
 │   └── agents/openai.yaml       # Codex skill card
@@ -31,7 +31,7 @@ user-lifecycle/
 └── package.json                 # pi.skills, for npx skills
 ```
 
-`npx skills add pierrebrunelle/user-lifecycle` installs the skill. `npx plugins add pierrebrunelle/user-lifecycle` installs the skill, the commands, and the subagents.
+`npx skills add pierrebrunelle/walk-the-job` installs the skill. `npx plugins add pierrebrunelle/walk-the-job` installs the skill, the commands, and the subagents.
 
 ## Before you open a pull request
 
@@ -40,7 +40,7 @@ user-lifecycle/
 3. `npx plugins discover .`
 4. `npx skills add . --list`
 
-The plugin name is `user-lifecycle`. Version fields in the manifests and in `SKILL.md` stay the same number.
+The plugin name is `walk-the-job`. Version fields in the manifests and in `SKILL.md` stay the same number.
 
 The skill files contain no XML tags. The Agent Skills specification forbids them.
 

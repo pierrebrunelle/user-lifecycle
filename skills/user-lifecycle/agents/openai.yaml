@@ -1,4 +1,0 @@
-interface:
-  display_name: "User lifecycle"
-  short_description: "Walk one user through a product and note where the job breaks"
-  default_prompt: "Use $user-lifecycle to walk one person through this product, from arrival until they finish or give up."

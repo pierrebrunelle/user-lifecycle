@@ -7,4 +7,4 @@ Attack the latest session or brief.
 
 Arguments: `$ARGUMENTS`
 
-Read [SKILL.md](../skills/user-lifecycle/SKILL.md) and follow [references/critic.md](../skills/user-lifecycle/references/critic.md). Leave the product and the job card as you found them. Save `lifecycle/critic.md`.
+Read [SKILL.md](../skills/walk-the-job/SKILL.md) and follow [references/critic.md](../skills/walk-the-job/references/critic.md). Leave the product and the job card as you found them. Save `lifecycle/critic.md`.

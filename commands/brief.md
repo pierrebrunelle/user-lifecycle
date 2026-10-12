@@ -7,4 +7,4 @@ Write the decision for the job in this workspace.
 
 Arguments: `$ARGUMENTS`
 
-Read [SKILL.md](../skills/user-lifecycle/SKILL.md) and follow [references/brief.md](../skills/user-lifecycle/references/brief.md). With no `lifecycle/job.md`, stop. Save `lifecycle/brief.md`. Ask whether to change the product, and wait.
+Read [SKILL.md](../skills/walk-the-job/SKILL.md) and follow [references/brief.md](../skills/walk-the-job/references/brief.md). With no `lifecycle/job.md`, stop. Save `lifecycle/brief.md`. Ask whether to change the product, and wait.

@@ -1,11 +1,11 @@
 # AGENTS.md
 
-This repo is the user-lifecycle plugin: one skill, three subagents, and six slash commands. Install with `npx plugins add pierrebrunelle/user-lifecycle` or `npx skills add pierrebrunelle/user-lifecycle`.
+This repo is the walk-the-job plugin: one skill, three subagents, and six slash commands. Install with `npx plugins add pierrebrunelle/walk-the-job` or `npx skills add pierrebrunelle/walk-the-job`.
 
 ## Structure
 
 ```
-skills/user-lifecycle/
+skills/walk-the-job/
 ├── SKILL.md                 # command routing and the shared rules
 ├── references/              # one file per command, plus the card, the ten questions, stages, floor, example
 └── agents/openai.yaml
@@ -16,7 +16,7 @@ evals/evals.json             # prompts and what a good result contains
 scripts/validate_plugin.py
 ```
 
-Manifests: root `plugin.json` (portable), `.plugin/plugin.json`, `.cursor-plugin/plugin.json`, `.claude-plugin/`, `.codex-plugin/`, `.agents/plugins/`, and `package.json`. Keep the name `user-lifecycle` and the version in sync.
+Manifests: root `plugin.json` (portable), `.plugin/plugin.json`, `.cursor-plugin/plugin.json`, `.claude-plugin/`, `.codex-plugin/`, `.agents/plugins/`, and `package.json`. Keep the name `walk-the-job` and the version in sync.
 
 ## Rules
 

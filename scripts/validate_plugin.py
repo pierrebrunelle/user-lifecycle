@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the user-lifecycle plugin layout. Pure stdlib; no third-party deps.
+"""Validate the walk-the-job plugin layout. Pure stdlib; no third-party deps.
 
 Checks:
   1. All JSON manifests parse.
@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PLUGIN_NAME = "user-lifecycle"
+PLUGIN_NAME = "walk-the-job"
 errors = []
 checks = 0
 
