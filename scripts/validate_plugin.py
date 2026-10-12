@@ -154,7 +154,18 @@ def main():
             check("short_description:" in metadata, f"{openai_yaml.relative_to(ROOT)}: missing short_description")
         line_count = len(skill_file.read_text(encoding="utf-8", errors="ignore").splitlines())
         check(line_count < 500, f"{skill_file.relative_to(ROOT)}: {line_count} lines, must stay under 500")
-        for name in ("stages.md", "floor.md", "example.md"):
+        for name in (
+            "stages.md",
+            "floor.md",
+            "example.md",
+            "card.md",
+            "walk.md",
+            "cast.md",
+            "trouble.md",
+            "research.md",
+            "critic.md",
+            "brief.md",
+        ):
             ref = skill_file.parent / "references" / name
             check(ref.is_file(), f"{skill_file.parent.relative_to(ROOT)}: missing references/{name}")
     check(

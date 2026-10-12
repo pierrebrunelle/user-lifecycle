@@ -2,7 +2,7 @@
   "name": "user-lifecycle",
   "displayName": "User lifecycle",
   "description": "A product manager walks one person through a product, from arrival until they finish or give up, and notes where the job breaks.",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "author": {
     "name": "Pierre Brunelle",
     "url": "https://github.com/pierrebrunelle"
@@ -20,6 +20,17 @@
   "supportUrl": "https://github.com/pierrebrunelle/user-lifecycle/issues",
   "privacyPolicyUrl": "https://github.com/pierrebrunelle/user-lifecycle/blob/main/SECURITY.md",
   "termsOfServiceUrl": "https://github.com/pierrebrunelle/user-lifecycle/blob/main/LICENSE",
-  "commands": ["./commands/walk.md"],
-  "agents": ["./agents/lifecycle-facilitator.md"]
+  "commands": [
+    "./commands/walk.md",
+    "./commands/cast.md",
+    "./commands/trouble.md",
+    "./commands/research.md",
+    "./commands/critic.md",
+    "./commands/brief.md"
+  ],
+  "agents": [
+    "./agents/lifecycle-facilitator.md",
+    "./agents/lifecycle-researcher.md",
+    "./agents/lifecycle-critic.md"
+  ]
 }

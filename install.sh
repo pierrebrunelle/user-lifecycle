@@ -82,7 +82,7 @@ install_skill() {
     curl -fsSL "$REPO_URL/skills/user-lifecycle/SKILL.md" -o "$skill_dest/SKILL.md"
     curl -fsSL "$REPO_URL/skills/user-lifecycle/agents/openai.yaml" -o "$skill_dest/agents/openai.yaml"
     local ref
-    for ref in stages.md floor.md example.md; do
+    for ref in stages.md floor.md example.md card.md walk.md cast.md trouble.md research.md critic.md brief.md; do
       curl -fsSL "$REPO_URL/skills/user-lifecycle/references/$ref" -o "$skill_dest/references/$ref"
     done
   fi

@@ -15,12 +15,12 @@ One skill, wrapped so each installer can find it.
 ```
 user-lifecycle/
 ├── skills/user-lifecycle/
-│   ├── SKILL.md                 # The session. Stay under 500 lines.
-│   ├── references/              # stages.md, floor.md, example.md
+│   ├── SKILL.md                 # Routing. Stay under 500 lines.
+│   ├── references/              # card, walk, cast, trouble, research, critic, brief, stages, floor, example
 │   └── agents/openai.yaml       # Codex skill card
-├── evals/evals.json             # Prompts and what a good session contains
-├── commands/walk.md             # /user-lifecycle:walk
-├── agents/lifecycle-facilitator.md
+├── evals/evals.json             # Prompts and what a good result contains
+├── commands/                    # walk, cast, trouble, research, critic, brief
+├── agents/                      # facilitator, researcher, critic
 ├── scripts/validate_plugin.py
 ├── install.sh                   # Claude Code, Cursor, Codex, Antigravity
 ├── plugin.json                  # Portable Agent Plugins manifest
@@ -31,7 +31,7 @@ user-lifecycle/
 └── package.json                 # pi.skills, for npx skills
 ```
 
-`npx skills add pierrebrunelle/user-lifecycle` installs the skill. `npx plugins add pierrebrunelle/user-lifecycle` installs the skill, the command, and the subagent.
+`npx skills add pierrebrunelle/user-lifecycle` installs the skill. `npx plugins add pierrebrunelle/user-lifecycle` installs the skill, the commands, and the subagents.
 
 ## Before you open a pull request
 

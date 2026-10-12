@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "Walk this as a user, from A to Z. We just added a settings page.",
-      "expected_output": "A full session. The job card comes before the steps and names one person, the arrival kind, what done looks like, what would make them leave, the path taken from the product, and any stage the product does not have. Steps quote labels from the running screen or from source, and the writeup says which of those two it used. Two troubles are produced, or the writeup names the troubles it looked for and what it tried. The table uses Small, Flow, or Check first. Each change names the place and the words to add, move, or remove. A change that would fit any product is absent. The writeup asks which rows to change and leaves the product as it was.",
+      "expected_output": "A full session. The job card comes before the steps and names one person, the arrival kind, what done looks like, what would make them leave, the path taken from the product, and any stage the product does not have. Steps quote labels from the running screen or from source, and the writeup says which of those two it used. Two troubles are produced, or the writeup names the troubles it looked for and what it tried. The table uses Small, Flow, or Check first. Each change names the place and the words to add, move, or remove. A change that would fit any product is absent. The writeup asks which rows to change. The product stays as it was. The job card is saved to lifecycle/job.md and the session to lifecycle/session.md.",
       "files": []
     },
     {
@@ -22,7 +22,25 @@
     {
       "id": 4,
       "prompt": "Who is this for? Don't walk it yet.",
-      "expected_output": "The job card only. No numbered session and no table. The person is taken from who the product addresses. If the product never says, the card says that and uses the narrowest person the first screen implies.",
+      "expected_output": "The job card only, saved to lifecycle/job.md. No numbered session and no table. The person is taken from who the product addresses. If the product never says, the card says that and uses the narrowest person the first screen implies.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Research whether anyone else finishes this job in a spreadsheet. Do not change the product.",
+      "expected_output": "A research table. Each row is a Fact with a source that was opened, or an Inference that points at a Fact row. A claim with no source is absent. The product and lifecycle/job.md are unchanged, unless the card file was missing and the command had to write it first. The reply is the table, not a session and not a brief.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Criticise the session you just wrote.",
+      "expected_output": "A critic table aimed at the session. Findings name a step, a heading, or a file. The product, the job card, and the session file are unchanged. If no session exists, the reply says so and stops.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "Write the brief. What should we change?",
+      "expected_output": "If lifecycle/job.md is missing, the reply stops and says to run cast. If the card exists, the brief uses the card for the person and the job, states research rows only when their kind is Fact, and takes a product change only from a session row. Inferences and critic findings sit under Check before building. The reply asks whether to change the product and waits.",
       "files": []
     }
   ]

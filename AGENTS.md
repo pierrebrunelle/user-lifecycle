@@ -1,18 +1,18 @@
 # AGENTS.md
 
-This repo is the user-lifecycle plugin: one skill, one subagent, and one slash command. Install with `npx plugins add pierrebrunelle/user-lifecycle` or `npx skills add pierrebrunelle/user-lifecycle`.
+This repo is the user-lifecycle plugin: one skill, three subagents, and six slash commands. Install with `npx plugins add pierrebrunelle/user-lifecycle` or `npx skills add pierrebrunelle/user-lifecycle`.
 
 ## Structure
 
 ```
 skills/user-lifecycle/
-├── SKILL.md                 # the session procedure
-├── references/              # stages, floor, example; opened from SKILL.md
+├── SKILL.md                 # command routing and the shared rules
+├── references/              # one file per command, plus the card, stages, floor, example
 └── agents/openai.yaml
 
-commands/walk.md                 # /user-lifecycle:walk
-agents/lifecycle-facilitator.md  # runs the session
-evals/evals.json                 # prompts and what a good session contains
+commands/                    # walk, cast, trouble, research, critic, brief
+agents/                      # facilitator, researcher, critic
+evals/evals.json             # prompts and what a good result contains
 scripts/validate_plugin.py
 ```
 
@@ -20,7 +20,8 @@ Manifests: root `plugin.json` (portable), `.plugin/plugin.json`, `.cursor-plugin
 
 ## Rules
 
-- One skill. The session procedure lives in `SKILL.md`. Stage notes live in `references/` and are opened when the procedure says so. The subagent and the command point at `SKILL.md`.
+- One skill. `SKILL.md` routes the command. The procedure for that command lives in `references/` and is opened when the router says so. The commands and the subagents point at `SKILL.md`.
+- `research` and `critic` leave the product and the job card as they found them.
 - Keep `SKILL.md` under 500 lines.
 - The skill stays generic. The product in front of the agent supplies the screens and the words.
 - Run `python3 scripts/validate_plugin.py` after a structural change.

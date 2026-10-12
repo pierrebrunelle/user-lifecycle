@@ -1,6 +1,6 @@
 {
   "name": "user-lifecycle",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "A product manager walks one person through a product and notes where the job breaks.",
   "author": {
     "name": "Pierre Brunelle",
@@ -20,7 +20,7 @@
   "interface": {
     "displayName": "User lifecycle",
     "shortDescription": "Walk one user through a product and note where the job breaks",
-    "longDescription": "Run a usability session on a product that was just built. One person, one job, from arrival until they finish or give up. The product supplies the screens and the words. The session notes where the job breaks.",
+    "longDescription": "One person, one job. Walk the product, save the job card, research facts the job depends on, and write a brief from what survived a check. The product supplies the words.",
     "developerName": "Pierre Brunelle",
     "category": "Developer Tools",
     "capabilities": ["Read"],
@@ -31,7 +31,8 @@
     "defaultPrompt": [
       "Walk one person through this product from arrival until they finish or give up",
       "Run a usability session on the flow we just built",
-      "Confirm this experience and note where the job breaks"
+      "Confirm this experience and note where the job breaks",
+      "Write the job card for this product and save it"
     ]
   }
 }

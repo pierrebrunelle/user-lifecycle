@@ -2,7 +2,7 @@
 
 A product manager sits with one person and walks the job they came to do, from arrival until they finish or give up. The notes say where the experience breaks.
 
-The product in front of the agent supplies the screens, the words, and the path. The skill supplies the session: the job before the story, the product used when it can run, and every quote checked against what was read.
+The product in front of the agent supplies the screens, the words, and the path. The skill supplies one job card and six commands that share it: walk the session, cast the person, try the breaks, research a fact the product cannot answer, attack the writeup, and write the decision from what survived.
 
 ## Install
 
@@ -65,32 +65,42 @@ Check any fact the story depends on before you use it, and name where you read i
 End with a table: moment, what they needed, what the product did, the change, and the size (Small, Flow, or Check first). Ask which rows to change. Wait.
 ```
 
-The procedure lives in [`skills/user-lifecycle/SKILL.md`](skills/user-lifecycle/SKILL.md). The paste above is the short form, for a single message when the skill is not installed.
+The router lives in [`skills/user-lifecycle/SKILL.md`](skills/user-lifecycle/SKILL.md). The paste above is the short form of `walk`, for a single message when the skill is not installed.
+
+## Commands
+
+| Command | What you get |
+| --- | --- |
+| `walk` | The session, from arrival until they finish or give up |
+| `cast` | The job card only, saved to `lifecycle/job.md` |
+| `trouble` | Two breaks the product can produce |
+| `research` | Facts outside the product, each with a source |
+| `critic` | What the writeup failed to earn. The product stays as it was |
+| `brief` | The decision, from the card and the facts that survived |
+
+`research` and `critic` leave the product and the job card as they found them. `brief` stops when the card is missing.
 
 ## What's inside
 
 ```
 skills/user-lifecycle/
-├── SKILL.md                         # The session
-├── references/                      # What to look for at each stage
-│   ├── stages.md
-│   ├── floor.md
-│   └── example.md
+├── SKILL.md                         # Which command, and the shared rules
+├── references/                      # One file per command, plus the card
 └── agents/openai.yaml               # Codex skill card
 
-agents/lifecycle-facilitator.md      # Subagent that runs the session
-commands/walk.md                     # /user-lifecycle:walk
-evals/evals.json                     # Prompts and what a good session contains
+commands/                            # walk, cast, trouble, research, critic, brief
+agents/                              # facilitator, researcher, critic
+evals/evals.json                     # Prompts and what a good result contains
 ```
 
 Client manifests live next to the skill so each installer can discover the format it understands.
 
 ## What you get back
 
-1. The job card: the person, the kind of arrival, what done looks like, what would make them leave, and the path.
-2. The facts the session depends on, each with where it was read, and whether the product was watched or read from source.
-3. The session, step by step, in the product's words, after every quote was checked.
-4. A table of where the job broke, and a question about which rows to change.
+1. The job card in `lifecycle/job.md`: the person, the kind of arrival, what done looks like, what would make them leave, and the path.
+2. On a walk or a trouble pass: the session in the product's words, after every quote was checked, and a table of where the job broke.
+3. On research: a table of facts and inferences, each with where it was read.
+4. On a brief: one change, or none, and what to check before building.
 
 ## Contributing
 
