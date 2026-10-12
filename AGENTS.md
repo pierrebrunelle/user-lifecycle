@@ -7,7 +7,7 @@ This repo is the user-lifecycle plugin: one skill, three subagents, and six slas
 ```
 skills/user-lifecycle/
 ├── SKILL.md                 # command routing and the shared rules
-├── references/              # one file per command, plus the card, stages, floor, example
+├── references/              # one file per command, plus the card, the ten questions, stages, floor, example
 └── agents/openai.yaml
 
 commands/                    # walk, cast, trouble, research, critic, brief

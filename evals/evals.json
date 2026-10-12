@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "Walk this as a user, from A to Z. We just added a settings page.",
-      "expected_output": "A full session. The job card comes before the steps and names one person, the arrival kind, what done looks like, what would make them leave, the path taken from the product, and any stage the product does not have. Steps quote labels from the running screen or from source, and the writeup says which of those two it used. Two troubles are produced, or the writeup names the troubles it looked for and what it tried. The table uses Small, Flow, or Check first. Each change names the place and the words to add, move, or remove. A change that would fit any product is absent. The writeup asks which rows to change. The product stays as it was. The job card is saved to lifecycle/job.md and the session to lifecycle/session.md.",
+      "expected_output": "A full session. The job card comes before the steps and names one person, the arrival kind, what done looks like, what would make them leave, the path taken from the product, and any stage the product does not have. Steps quote labels from the running screen or from source, and the writeup says which of those two it used. Two troubles are produced, or the writeup names the troubles it looked for and what it tried. After first success, the writeup names the new problems the product handed them, or says success was not reached. The table uses Small, Flow, or Check first. Each change names the place and the words to add, move, or remove. A change that would fit any product is absent. The writeup asks which rows to change. The product stays as it was. The job card is saved to lifecycle/job.md and the session to lifecycle/session.md.",
       "files": []
     },
     {
@@ -40,7 +40,7 @@
     {
       "id": 7,
       "prompt": "Write the brief. What should we change?",
-      "expected_output": "If lifecycle/job.md is missing, the reply stops and says to run cast. If the card exists, the brief uses the card for the person and the job, states research rows only when their kind is Fact, and takes a product change only from a session row. Inferences and critic findings sit under Check before building. The reply asks whether to change the product and waits.",
+      "expected_output": "If lifecycle/job.md is missing, the reply stops and says to run cast. If the card exists, the brief uses the card for the person and the job, states research rows only when their kind is Fact, and takes a product change only from a session row. The ten questions each have an answer with a source, or the word open. Are there enough of them stays open unless a Fact supports it. Inferences and critic findings sit under Check before building. The reply asks whether to change the product and waits.",
       "files": []
     }
   ]

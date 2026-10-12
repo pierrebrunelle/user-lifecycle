@@ -16,7 +16,7 @@ One skill, wrapped so each installer can find it.
 user-lifecycle/
 ├── skills/user-lifecycle/
 │   ├── SKILL.md                 # Routing. Stay under 500 lines.
-│   ├── references/              # card, walk, cast, trouble, research, critic, brief, stages, floor, example
+│   ├── references/              # card, questions, walk, cast, trouble, research, critic, brief, stages, floor, example
 │   └── agents/openai.yaml       # Codex skill card
 ├── evals/evals.json             # Prompts and what a good result contains
 ├── commands/                    # walk, cast, trouble, research, critic, brief

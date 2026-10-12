@@ -165,6 +165,7 @@ def main():
             "research.md",
             "critic.md",
             "brief.md",
+            "questions.md",
         ):
             ref = skill_file.parent / "references" / name
             check(ref.is_file(), f"{skill_file.parent.relative_to(ROOT)}: missing references/{name}")

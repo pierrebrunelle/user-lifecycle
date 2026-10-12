@@ -6,7 +6,7 @@ Leave the product as you found it. Leave `lifecycle/job.md` as you found it, unl
 
 ## What to look up
 
-Read the card. List the claims the job, done, or leave would depend on that the product does not already say. Typical claims: what this person does today to finish the job, the number a change would assume, the other way they already finish it.
+Read the card and [questions.md](questions.md). List the claims the job, done, or leave would depend on that the product does not already say. Typical claims: what this person does today to finish the job, the number a change would assume, the other way they already finish it. "Are there enough of them?" is one of these claims when the job depends on it. The product cannot answer that one.
 
 If the product already says it, quote the product in the table and do not search for a second version.
 

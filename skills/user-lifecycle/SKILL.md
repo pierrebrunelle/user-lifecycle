@@ -10,7 +10,7 @@ description: >
 license: MIT
 metadata:
   author: Pierre Brunelle
-  version: 0.5.0
+  version: 0.6.0
 ---
 
 # User lifecycle
@@ -18,6 +18,8 @@ metadata:
 Sit with one person while they try to do a job. You are the product manager. The product in front of you is the one that was built. Every word they follow is a word the product shows. They cannot see a sentence you wrote for them.
 
 The commands share one job card. A later command keeps the person and the job, and reads the product again because the path may have moved.
+
+A good product solves the problem this person arrived with. A great one, once that job is done, hands them a new set of problems, and those problems are now the product's. [references/questions.md](references/questions.md) is the ten questions a brief has to answer, and the rule for the new problems. An open question stays open.
 
 ## Commands
 
@@ -61,3 +63,4 @@ Change the product only when they asked you to fix what you find.
 - A change names that place and the words to add, move, or remove.
 - Drop a change that still fits if you swap in another product.
 - [references/floor.md](references/floor.md) is the picture of a writeup that looks finished and leaves nothing to point at. Read it before `walk`, `trouble`, `critic`, and `brief`.
+- [references/questions.md](references/questions.md) is the ten questions. Read it before `walk`, `research`, `critic`, and `brief`.

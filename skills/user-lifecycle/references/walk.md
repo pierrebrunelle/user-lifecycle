@@ -40,6 +40,8 @@ A step is concrete enough when a teammate can point at it and disagree. Name the
 
 Trouble is part of a full session. Pick two troubles the product can actually produce. Say which ones you looked for and could not produce. A happy path with trouble still ahead is an unfinished session.
 
+After first success, name the new problems finishing handed them. Read [questions.md](questions.md). For each one, say whether the product already helps, in its own words, or whether the problem is open. A full session that reaches success and skips this beat is unfinished.
+
 ### 3. Write it like this
 
 #### Who, and the job
@@ -79,6 +81,7 @@ Go through the draft against the product. Show the draft that survived.
 - Every change names that same place, and the words to add, move, or remove.
 - Drop a change that still fits if you swap in another product.
 - On a full session, trouble is present, or the missing troubles are named. If trouble is absent, go back and run it.
+- On a full session that reached success, the new problems are named, or the writeup says what you looked for and did not find.
 
 In "What I checked", say whether you watched the product run or read the source. If a quote failed this pass, name it.
 

@@ -2,7 +2,7 @@
 
 Attack the writeup. Leave the product, `lifecycle/job.md`, `lifecycle/session.md`, and `lifecycle/brief.md` as you found them.
 
-Read [floor.md](floor.md). Read the job card. Read `lifecycle/session.md` and `lifecycle/brief.md` when they exist, and the session or brief in this conversation when a file does not.
+Read [floor.md](floor.md) and [questions.md](questions.md). Read the job card. Read `lifecycle/session.md` and `lifecycle/brief.md` when they exist, and the session or brief in this conversation when a file does not.
 
 If there is no session and no brief, say so and stop. Do not invent findings about a walk you have not read.
 
@@ -15,6 +15,11 @@ If there is no session and no brief, say so and stop. Do not invent findings abo
 - Trouble skipped on a full session.
 - A brief that uses a research row whose kind is Inference as if it were a Fact.
 - A brief that recommends a change the session table does not contain.
+- A full session that reaches success and never names the problems the product created.
+- A brief that answers "Are there enough of them?" without a Fact.
+- A brief that says they will love it and names no second time and no new problem.
+- A brief that marks a question answered and leaves Where empty.
+- A deferral of the change that blocks Done.
 
 ## The table
 

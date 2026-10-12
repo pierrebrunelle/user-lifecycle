@@ -25,7 +25,7 @@ The product is a one-screen settings page. The session was read from `src/settin
 ### Sam tries to turn quiet hours on
 
 1. **Entry.** Sam opens `Settings`. The first row under the title is `Quiet hours`, with a switch in the off position. Sam can see the action that matches the job.
-2. **First success.** Sam turns the switch on. The switch moves to on. The row still reads `Quiet hours`. The screen has no control for 2pm or 4pm. Sam cannot tell the job is done, because the hours were the job.
+2. **First success.** Sam turns the switch on. The switch moves to on. The row still reads `Quiet hours`. Offering quiet hours handed Sam a new problem: which hours. The screen has no control for 2pm or 4pm, so that problem is open. Sam cannot tell the job is done, because the hours were the job.
 3. **Trouble, return.** Sam leaves and opens `Settings` again. The switch is on. The row still reads `Quiet hours`. Nothing on the screen says the hours. Sam has to trust that "on" means 2pm to 4pm, and the product never said that.
 4. **Leaving.** The switch state is kept in `quietHours`. The screen never says the work was kept, or where.
 

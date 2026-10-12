@@ -48,6 +48,14 @@ Breaks: the writeup includes a diff, and the table describes the product after y
 
 Holds: the table names the change. The product stays as you found it until they pick rows.
 
+## The arrival problem, and then silence
+
+Breaks: "This solves the problem they came with."
+
+They arrived with a job. Finishing it hands them the next one. A writeup that stops at the arrival has not watched them succeed.
+
+Holds: "They came to send the note. After `Send`, the screen is `Sent`. The new problem is whether the other person got it. The screen never says. That problem is open."
+
 ## Trouble skipped
 
 Breaks: the happy path, then an empty table.

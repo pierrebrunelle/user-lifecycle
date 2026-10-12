@@ -4,6 +4,8 @@ A product manager sits with one person and walks the job they came to do, from a
 
 The product in front of the agent supplies the screens, the words, and the path. The skill supplies one job card and six commands that share it: walk the session, cast the person, try the breaks, research a fact the product cannot answer, attack the writeup, and write the decision from what survived.
 
+A good product solves the problem this person arrived with. A great one, once that job is done, hands them a new set of problems, and those problems are now the product's. The brief asks ten questions across the customer, the problem, the solution, and the implementation, and it leaves a question open when the evidence is missing.
+
 ## Install
 
 ### Skill (recommended for most assistants)
